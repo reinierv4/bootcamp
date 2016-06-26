@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style_sheet.css">
+</head>
+<body>
+	
+	
+	<% @@machine.product_prices.each do |key, value| %> 
+	
+	<%=key%> 
+
+	<a href='/price_request/<%=key%>' method="GET" class="button">
+	Price
+	</a>
+	<a href='/selected/<%=key%>' method="GET" name='submit' class="button">Select
+	</a>
+	<hr>
+	<%end%>
+
+	
+	<a href='/dispense' method="GET" class ="button"> Dispense </a>
+	<a href='/fillmachine' method="GET" class ="button"> Fill </a>
+	<a href='/balance' method="GET" class ="button"> Balance </a>
+	<hr>
+	
+
+	<form action="/insertcoin" method="GET">
+	Add money:<br>
+	<button name = "money" value='0.05'>0.05</button>
+	<button name = "money" value='0.10'>0.10</button>
+	<button name = "money" value='0.20'>0.20</button>
+	<button name = "money" value='0.50'>0.50</button>
+	<button name = "money" value='1.00'>1.00</button>
+	<button name = "money" value='2.00'>2.00</button>
+	</form>
+	<%= @@info_message %> 
+	<hr>
+	
+	<form action="/read_my_mind" method="GET">
+	<input type= "text" name ="search" placeholder="Topic"></input>
+	<button type=submit>Read My Mind</button>
+	</form>
+
+
+
+
+</body>
+</html>

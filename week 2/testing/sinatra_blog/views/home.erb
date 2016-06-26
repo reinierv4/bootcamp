@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blogs</title>
+</head>
+<body>
+
+	<% posts.each_with_index do |post,index| %>
+	<a href='/post_details:<%=index%>' action='/post_details:<%=index%>' method="GET" name = "index" value = <%=index%>> Title: <%= post.title %></a><br>
+	<hr>
+	<% end %>
+	
+	<a href='/new_post' action='/new_post' method="GET"> New post? Click me!</a><br>
+
+
+
+</body>
+</html>
+
+

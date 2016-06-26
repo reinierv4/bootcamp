@@ -1,0 +1,6 @@
+gem 'sinatra'
+gem 'artii'
+gem 'sinatra-reloader'
+
+
+source 'https://rubygems.org'

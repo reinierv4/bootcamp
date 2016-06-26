@@ -1,0 +1,115 @@
+ @font-face { font-family: twitter; src: url('source/arista-light.otf'); } 
+
+*{
+	padding: 0;
+	font-family: twitter;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.img-responsive {
+    margin: 5px auto;
+    height: 40px;
+	width: 40px;
+
+}
+
+.jumbotron{
+	background-image: url("img/malta.jpeg") ;
+	background-size: cover;
+	width: 100%;
+	height: 500px;
+	margin-bottom: 0;
+	position: relative;
+}
+
+.profile-pic {
+	background-image: url("img/twitter-logo.png");
+	background-size: cover;
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	top: 400px;
+	left: 50px;
+	overflow: visible;
+	z-index: 1;
+}
+
+.hover-text{
+	line-height: 25px;
+	color: #00ACED;
+}
+
+.hover-text:hover{
+	color: black;
+	border-bottom: 3px solid #00ACED;
+}
+
+.stats{
+	height: 50px;
+}
+
+.full-size{
+	height: 100%;
+}
+
+.content{
+	height: calc(200vh - 550px);
+
+}
+
+.content-left{
+	padding: 55px;
+	color: black;
+}
+
+.special-list li{
+	height: 50px;
+	/*display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	/*display: -ms-flexbox;*/  /* TWEENER - IE 10 */
+	/*display: -webkit-flex;*/  /*NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	/*display: flex;*/
+	/*justify-content: flex-center;*/
+}
+
+.btn-follow{
+	margin-top: -8px;
+}
+
+.black-text{
+	color: black;
+	font-size: 16px;
+}
+
+.send-tweet{
+	margin-top: 10px;
+	width: 250px;
+}
+
+.known-followers{
+	margin-top: 10px;
+	color: #00ACED;
+	font-size: 12px;	
+}
+
+.left-side-profile-holder{
+	display: -webkit-box;   /*OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -ms-flexbox;   /*TWEENER - IE 10 */
+	display: -webkit-flex;  /*NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-right: -10px;
+}
+
+.left-side-profile{
+	height:50px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+
+
+
+
+

@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html>
+
+<head>
+  <title>Add | Online Calculator</title>
+</head>
+
+<body>
+
+  	<h1>Calculate</h1>
+	
+	<form action="/calculated" method="POST">
+		<input type="number" name="first_number" placeholder="1st number"> and
+		<input type="number" name="second_number" placeholder="2nd number">
+		
+		<button type="submit" name="operation" value="add" >Add</button>
+		<button type="submit" name="operation" value="substract" >Substract</button>
+		<button type="submit" name="operation" value="multiply" >Multiply</button>
+		<button type="submit" name="operation" value="divide" >Divide</button>
+
+	</form>
+	
+	<h1>Get the time from your favourite city</h1>
+	
+	<form action="/time" method="GET">
+		
+		<input type="text" name="city" placeholder="New York/Madrid/Tokyo"> and
+		<button type="submit" >Get time</button>
+
+	</form>
+
+	<form action="/countup" method="GET">
+		
+		<input type="text" name="number" placeholder="Number"> and
+		<button type="submit" >Count Up</button>
+
+	</form>
+
+	<img src="http://globe-views.com/dcim/dreams/calculator/calculator-01.jpg" height="42" width="42">
+	
+
+</body>
+</html>

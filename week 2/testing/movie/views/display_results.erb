@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	
+	<h3>Which movie has the highest rating?</h3>
+	<% @movies.each do |movie| %>
+		<%= movie.title %>
+		<a href='/check_answer'  action='/check_answer' method="GET" name="movie" value=<%= movie.title %>>
+			<img src = '<%= movie.poster %>' width="42">
+		</a>
+		
+		<hr>
+	<% end %>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+.navbar{
+	background-color: white;
+	height: 100px;
+	margin-top: 0;
+}
+
+.header{
+	margin-top: 50px;
+
+}
+
+.jumbotron{
+	height: 500px;
+	background-size: cover;
+	background-image: url("img/jumbotron.jpg");
+	/*position: relative;*/
+	/*display: flex;*/
+	display: table;
+	width: 100%;
+	/*align-items: center;*/
+}
+
+.jumbo-text{
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+	/*position: absolute;*/
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*transform: translate(-50%, -50%);*/
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+.shortcut{
+	background-color: rgb(217,83,79);
+	height: 300px;
+	margin-top: 0;
+}
+.projects{
+	background-color: white;
+	height: 1000px;
+}
+.shortcut2{
+	background-color: grey;
+	height: 500px;
+	border-top: 10px solid rgb(217,83,79);
+}
+
+.disclaimer{
+	background-color: darkgrey;
+	height: 300px;
+}
+
+
+.logo{
+ 	margin-left: auto;
+    margin-right: auto;	
+}
+
+.nav-link{
+	display: inline;
+	text-decoration: none;
+	color: grey;
+}
+
+
+.title{
+	height = 150px;
+}
+
+.picture-holder{
+	margin-left: 8%;
+	margin-right: 8%;
+	height: 200px;
+}
+.pictures{
+	
+}

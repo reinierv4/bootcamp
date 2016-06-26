@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<th>Task</th><th>Status</th><th>Complete</th><th>Delete</th>
+		</tr>
+		<% todo_list.tasks.each do |task| %>
+		<tr>
+			<td><%= task.content %> </td>
+		<td>
+		<%if task.complete? %>
+			"Completed"
+		<% else %>
+			"To do"
+		<% end %>
+		</td>
+		<td>
+			<a href='/complete_task:<%=task.id%>' action="/complete_task/<%=task.id%>" method="GET" name = "id" value = <%=task.id%> >Complete</a>
+		</td>
+		<td>
+			<a href='/delete_task:<%=task.id%>' action="/delete_task/<%=task.id%>" method="GET" name = "id" value = <%=task.id%> >Delete</a>
+		</td>
+		</tr>
+		<br>
+	<% end %>
+
+	</table>
+
+	
+
+
+	<a href="/new_tasks" action="/new_tasks" method="GET" >Add a new task</a>
+
+</body>
+</html>
