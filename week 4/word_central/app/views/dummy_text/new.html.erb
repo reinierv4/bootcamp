@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dummy Text</title>
+</head>
+<body>
+	
+	<form action="/dummy_text" method= "POST">
+  		<div>
+    		<input type="text" name = "quantity" placeholder="quantity"> <br>
+    		<input type="radio" name="type_of_text" value="paragraph" checked> Paragraph <br>
+  			<input type="radio" name="type_of_text" value="words">Words<br>
+  		</div>
+  		<button type="submit">Get me that dummy text</button>
+  		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	</form>
+
+</body>
+</html>

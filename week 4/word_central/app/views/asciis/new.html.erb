@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Word Central</h1>
+
+	<h2>Submit text for ASCII conversion</h2>
+
+	<form action="/asciis" method= "POST">
+  		<div>
+    		<label for="ascii_user_text">Text</label>
+    		<textarea name="ascii[user_text]" id="ascii_user_text"></textarea>
+  		</div>
+  		<button type="submit">Submit text</button>
+  		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	</form>
+
+</body>
+</html>
