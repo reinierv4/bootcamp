@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact Info</title>
+</head>
+<body>
+	
+	<div>
+		<p>Name: <%= @contact.name %></p> 
+		<p>Email: <%= @contact.email %></p> 
+		<p>Phone: <%= @contact.phone %></p> 
+		<p>Address: <%= @contact.address %></p> 
+	</div>
+		
+	
+	<p><%= link_to "Index", "/contacts" %> </p>
+</body>
+</html>

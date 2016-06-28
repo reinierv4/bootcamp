@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<form action="/search" method="POST">
+		<input type="text" name = "search_value", placeholder="search">
+		<button type="submit">Search</button>
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	</form>
+
+	<% @contacts.each do |contact| %>
+		
+		<div>
+			<p><%= link_to contact.name, "/contact/#{contact.id}" %> 
+				<form action="/favourite/<%=contact.id%>" method="POST" style="display:inline">
+				<%if contact.favourite %>
+					<button type= "submit">Remove from favourites</button>
+				<%else%>
+
+					<button type= "submit">Add to favourites</button>
+				<%end%>
+				 	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				</form>
+			</p> 
+		</div>
+		<hr>
+	<%end%>
+	<p><%= link_to "Create New", "/contact/new" %> </p>
+	<p><%= link_to "Favourites", "/contact/favourites" %> </p>
+</body>
+</html>
