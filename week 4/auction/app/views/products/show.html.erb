@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%=@product.title%></title>
+</head>
+<body>
+	
+
+	<p><%=@product.title%></p>
+	<p><%=@product.description%></p>
+	
+	<ul>
+		<%if @current_bids.length>0%>
+			<% @current_bids.each do |bid| %>
+				<li><%=bid.ammount%> from <%=User.find(bid.user_id).name%></li>
+			<%end%>
+		<%else%>
+			<p>You can be the first, the minimum bid is <%=@product.minimum_price%></p>	
+		<br>
+		<%end%>
+		<%if Time.now > @product.deadline %>
+			<p>The winner of the auction is <%=User.find(@current_bids.last.user_id).name%></p>
+		<%else%>
+			<%= form_for [@product, @bid] do |f| %>
+				
+				<%= f.label :ammount %>
+				<%= f.text_field :ammount %>
+				
+				<%= f.button %>
+			<%end%>
+			<p> The dealine for bidding is <%=@product.deadline%> </p>
+		<%end%>
+	</ul>
+
+	
+	
+	
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<% if @products %>
+	<ul>
+		<% @products.each do |product| %>
+			<li><%=product.title%></li> <%= link_to "See product", product_path(product) %>
+		<%end%>
+	</ul>
+	<%= link_to "Add new product", new_user_product_path(@user) %>
+<%end%> 

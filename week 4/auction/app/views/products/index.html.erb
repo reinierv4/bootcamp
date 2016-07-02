@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Products</title>
+</head>
+<body>
+	<h1>Please see the products below:</h1>
+	<ul>
+	<% @products.each do |product| %>
+		<li><%=product.title%></li>
+		<%= link_to "Edit", product_path(product) %>
+	<%end%>
+	</ul>
+
+</body>
+</html>

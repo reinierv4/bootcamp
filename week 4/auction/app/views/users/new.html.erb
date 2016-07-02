@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Register Today</h1>
+	
+	<%= form_for @user do |f| %>
+		<%=f.label :name %>
+		<%=f.text_field :name %>
+
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<%= f.button %>
+
+	<%end%>
+</body>
+</html>	

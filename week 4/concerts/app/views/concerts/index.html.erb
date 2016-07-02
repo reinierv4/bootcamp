@@ -1,0 +1,39 @@
+        
+        <header class="container">
+            <nav class="row navbar navbar-default navbar-fixed-top">
+                <div class="container col-sm-2">
+                    <ul class="nav navbar-nav">
+                      <li class="active home"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    </ul>
+                </div>
+                
+                <div class="container col-sm-10">
+                    <img src="/assets/concert-logo.jpeg" class="img-responsive logo">
+                </div>
+            </nav>
+        </header>
+
+        <div class="container-fluid">
+            <div class="column col-sm-2 sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <% @concerts.each do |concert| %>
+                        <li><a href="" class = "list-group-item"><%=concert.artist%></a></li>
+                    <%end%>
+                </ul>
+            </div>
+            
+    
+        </div>
+
+        <div class="col-sm-10" style='margin-top: 70px'>
+            <ul>
+                <% @todays_concerts.each do |concert| %>
+                    <%=concert.artist%><br>
+                    <hr>
+                    <%=concert.description%><br>
+                    <hr>
+                <%end%>
+            </ul>
+
+
+        </div>

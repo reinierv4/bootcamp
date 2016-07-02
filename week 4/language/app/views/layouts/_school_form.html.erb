@@ -1,0 +1,54 @@
+<%= form_for @school, html: {multipart: true} do |f| %>
+	
+	<div class="field">
+		<%=f.label :name %>
+		<%=f.text_field :name %>
+		<br>
+	</div>
+
+	<div class="field">
+		<%=f.label :contact %>
+		<%=f.text_field :contact %>
+		<br>
+	</div>
+
+	<div class="field">
+		<%=f.label :city %>
+		<%=f.text_field :city %>
+		<br>
+	</div>
+	
+	<div class="field">
+		<%=f.label :price %>
+		<%=f.text_field :price %>
+		<br>
+	</div>
+
+	<div class="field">
+		<%=f.label :lat %>
+		<%=f.text_field :lat %>
+		<br>
+	</div>
+
+	<div class="field">
+		<%=f.label :lon %>
+		<%=f.text_field :lon %>
+		<br>
+	</div>
+
+	<div class="field">
+		<%=f.label :description %>
+		<%=f.text_area :description %>
+		<br>
+	</div>
+
+	<div class="field">
+		<%=f.label :image %>
+		<%=f.file_field :image %>
+		<br>
+	</div>
+	<div class="actions">
+		<%= f.button %>
+	</div>
+	
+<%end%>

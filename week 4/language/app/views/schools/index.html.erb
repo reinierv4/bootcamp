@@ -1,0 +1,45 @@
+
+<%= render :partial => '/layouts/header' %>
+
+
+<div class="container-fluid" style='margin-top: 50px;'>
+	
+	<div class="row">
+	<div class="column col-sm-2 sidebar" id="sidebar">
+        <ul class="nav">
+            <% @schools.each do |school| %>
+            	<li><a href="#<%=school.id%>" class = "list-group-item"><%=school.name%></a></li>
+            <%end%>
+        </ul>
+    </div>
+	
+	<div class="col-sm-3">
+		
+	</div>
+	
+	<div class="col-sm-6">
+		<!-- <img src="<%=@url%>" alt=""> -->
+		
+		<ul class="school_index">
+		    <% @schools.each do |school| %>
+		        <span class="anchor" id="<%=school.id%>"></span>
+			    <div>
+			        <%=school.name%><br>
+			       	<hr>
+			        <%=school.description%><br>
+			    	<hr>
+			    	<%=image_tag school.image.url(:large) %><br>
+		    	</div>
+			<%end%>
+		</ul>
+	</div>
+
+	<div class="col-sm-5"></div>
+
+</div>
+</div>
+
+
+<script>
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+</script>

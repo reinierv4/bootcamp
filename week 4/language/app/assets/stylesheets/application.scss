@@ -1,0 +1,49 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+*{
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #f2f2f2;
+}
+
+
+.header{
+	position: static;
+}
+
+
+
+.welcome_text{
+	text-align: center;
+	font-size: 16px;
+
+}
+
+.car{
+	margin-top: -11px;
+	height: 500px;
+}
+
+.img-responsive {
+    margin: 5px auto;
+    height: 40px;
+}
+
+.anchor{
+  display: block;
+  height: 115px; /*same height as header*/
+  margin-top: -115px; /*same height as header*/
+  visibility: hidden;
+}
+
+#sidebar{
+	margin-left: -30px;
+	position: fixed;
+
+}

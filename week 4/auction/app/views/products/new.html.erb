@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Add a product</h1>
+	
+	<%= form_for [@user, @product] do |f| %>
+		<%=f.label :title %>
+		<%=f.text_field :title %>
+		<br>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+		<br>
+		<%= f.label :minimum_price %>
+		<%= f.text_field :minimum_price %>
+		<br>
+		<%= f.label :deadline %>
+		<%= f.text_field :deadline %>
+		<br>
+
+		<%= f.button %>
+
+	<%end%>
+</body>
+</html>	

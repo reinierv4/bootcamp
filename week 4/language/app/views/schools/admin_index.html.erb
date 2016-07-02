@@ -1,0 +1,45 @@
+<%= render :partial => '/layouts/header' %>
+
+<div class="container-fluid", style="margin-top: 100px">
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+			<table class="table table-striped">
+			    <thead>
+			      	<tr>
+				        <th>Name</th>
+				        <th>City</th>
+				        <th>Contact</th>
+				        <th>Price</th>
+				        <th></th>
+				        <th></th>
+				        <th></th>
+			      	</tr>
+			    </thead>
+			    <tbody>
+				    <% @schools.each do |school| %>
+				    <tr>
+				    	<td><%=school.name%></td>
+				    	<td><%=school.city%></td>
+				    	<td><%=school.contact%></td>
+				    	<td>€<%=school.price.to_i%></td>
+				    	<td>
+				    		<%= link_to '<button type="button" class="btn btn-success">View</button>'.html_safe, school_path(school)%>
+				    	</td>
+				    	<td>
+							<%= link_to '<button type="button" class="btn btn-primary">Edit</button>'.html_safe, edit_school_path(school)%>
+				    	</td>
+				    	<td>
+				    		<a href="/school/delete/<%=school.id%>" method="DELETE" data-confirm= "Are you sure"><button type="button" class="btn btn-danger">Delete</button></a>
+				    	</td>
+				    </tr>
+				    <%end%>
+				</tbody>
+			  </table>
+			  <%= link_to '<button type="button" class="btn btn-success">Add new School </button>'.html_safe, new_school_path%>
+			  
+
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
+</div>
